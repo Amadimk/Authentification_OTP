@@ -1,0 +1,14 @@
+[ req ]
+default_bits = 256
+default_keyfile = appli.key.pem
+distinguished_name = req_distinguished_name
+string_mask = nombstr
+req_extensions = v3_req
+[ req_distinguished_name ]
+commonName = Common Name (eg, Jean DUPONT)
+commonName_max = 64
+emailAddress = Email Address (eg, prenom.nom@etu.unilim.fr)
+emailAddress_max = 40
+[ v3_req ]
+nsCertType = client, email
+basicConstraints = critical,CA:false
