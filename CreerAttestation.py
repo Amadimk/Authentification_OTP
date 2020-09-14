@@ -28,7 +28,7 @@ def Mail(exp,file,dst):
 	args = "openssl cms -sign -in piece.txt -signer AC/certiplus.crt -inkey AC/appli.key.pem -from "+exp+" -to "
 	args+= dst+ " -subject \"Certiplus - Diplome signer \" -out mail.msg" 
 	#| openssl cms -encrypt -out mail.msg -aes256 unilim.fr.cert"
-	#args2 ="openssl cms -sign -in piece.txt -signer AC/certiplus.crt -inkey AC/appli.key.pem -from 'amadou-oury.diallo@etu.unilim.fr' -to 'amadimk@gmail.com' -subject 'Certiplus Diplome signer' -out mail.msg"
+	#args2 ="openssl cms -sign -in piece.txt -signer AC/certiplus.crt -inkey AC/appli.key.pem -from 'amadou-o@etusgg.fr' -to 'amadimk@gmail.com' -subject 'Certiplus Diplome signer' -out mail.msg"
 	subprocess.run(args,shell=True)
 	time.sleep(1)
 	f=open('mail.msg','r')
